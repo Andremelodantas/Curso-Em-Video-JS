@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom primeiros passos</title>
+    <style>
+        body{
+            background-color: aqua;
+            color:black;
+            font:normal 18pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Primeiros passos com DOM</h1>
+    <p>Opa</p>
+    <p>Aprendendo a usar <strong>DOM</strong> em JS</p>
+    <div id="msg">clique em mim</div>
+    <script>
+        //maneiras de selecionar objetos DOM
+        var p1 = document.getElementsByTagName('p')[1]
+        window.document.write(window.document.URL)// mostrar url
+        document.write("<br/>Ta asssim " + p1.innerText)//mostrar paragrafo 1
+        p1.style.color = "green" // trocar cor do p1 
+        document.write("<br/>" + p1.innerHTML)//mostrar p1 igual
+        var d = document.getElementById("msg") // selecionar div com id
+        d.style.background = "green"//trocar cor do background do div
+        var corpo = document.body//declarar variavel do background
+        corpo.style.background = "yellow"//trocar cor do background
+        d.innerText= "Estou aguardando..."// trocar texto da variavel d
+        var w = document.querySelector("div#msg") //  melhor jeito de selecionar elemnentos
+        w.style.background = "gray" // trocar cor do background de w
+    </script>
+</body>
+
+
+</html>
